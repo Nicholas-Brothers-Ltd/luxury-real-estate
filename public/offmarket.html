@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Off-Market Listings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">Nicholas Experience</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/properties">Properties</a>
+    <a href="/offmarket">Off-Market</a>
+    <a href="#">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO GATE -->
+<section class="elite-gate" id="gate">
+  <div class="gate-overlay">
+    <h1>Elite Access</h1>
+    <p>Discreet. Exclusive. Unlisted.</p>
+    <button onclick="unlock()">Enter Private Collection</button>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="offmarket hidden" id="content">
+
+  <h2>Private Collection</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+      <div class="card-info">
+        <h3>Confidential Estate</h3>
+        <p>Price Upon Request</p>
+        <button onclick="contact()">Contact Concierge</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1">
+      <div class="card-info">
+        <h3>Private Island Villa</h3>
+        <p>$50M+</p>
+        <button onclick="contact()">Contact Concierge</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div class="modal hidden" id="modal">
+  <div class="modal-content">
+    <h3>Private Concierge</h3>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Your Request"></textarea>
+    <button onclick="closeModal()">Submit Request</button>
+  </div>
+</div>
+
+<script src="offmarket.js"></script>
+
+</body>
+</html>
