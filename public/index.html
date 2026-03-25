@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Nicholas Experience</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas Experience | Luxury Real Estate</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="navbar">
   <div class="logo">Nicholas Experience</div>
-
   <div class="nav-links">
-    <a href="#home">Home</a>
+    <a href="#hero">Home</a>
     <a href="#buy">Buy</a>
     <a href="#developments">New Developments</a>
     <a href="#locations">Locations</a>
@@ -21,550 +22,165 @@
   </div>
 </div>
 
-<!-- HERO -->
-<div class="hero" id="home">
+<div class="hero" id="hero">
   <div class="hero-overlay">
     <h1>Where Luxury Meets Experience</h1>
     <p>Curated properties for a refined lifestyle</p>
-    <a href="/properties" class="cta-btn">Explore Exclusive Listing</a>
+    <a href="/properties" class="cta-btn">Explore Exclusive Listings</a>
 
-    <div class="search-toggle" onclick="toggleSearch()">
-      Search Properties
-    </div>
+    <div class="search-toggle" onclick="toggleSearch()">Search Properties</div>
 
     <div class="search-bar hidden" id="searchBar">
-      <select>
+      <select id="locationFilter">
         <option>Location</option>
+        <option>Nairobi</option>
         <option>Miami</option>
-        <option>Monaco</option>
+        <option>Dubai</option>
         <option>Aspen</option>
       </select>
 
-      <select>
+      <select id="priceFilter">
         <option>Price Range</option>
-        <option>$1M - $5M</option>
-        <option>$5M - $20M</option>
-        <option>$20M+</option>
+        <option value="1-5">$1M - $5M</option>
+        <option value="5-20">$5M - $20M</option>
+        <option value="20+">$20M+</option>
       </select>
 
-      <select>
+      <select id="typeFilter">
         <option>Property Type</option>
-        <option>Penthouse</option>
         <option>Villa</option>
-        <option>Estate</option>
+        <option>Penthouse</option>
+        <option>Apartment</option>
       </select>
 
-      <select>
-        <option>Features</option>
-        <option>Private Pool</option>
-        <option>Waterfront</option>
-        <option>Wine Cellar</option>
-      </select>
-
-      <button>Search</button>
+      <button onclick="filterProperties()">Search</button>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="about-preview">
   <h2>Curated Living, Redefined</h2>
   <p>
-    Nicholas Experience is a digital platform designed to showcase luxury properties through a seamless,
-    visually immersive interface. Blending minimalist design with cutting-edge technology,
+    Nicholas Experience is a digital platform designed to showcase luxury properties through a seamless, 
+    visually immersive interface. Blending minimalist design with cutting-edge technology, 
     we connect discerning clients to some of the world’s most exclusive real estate opportunities.
   </p>
 </section>
 
-<!-- FEATURED -->
 <section class="featured">
-
   <h2>Featured Collection</h2>
-
-  <!-- EDITOR PICKS -->
   <div class="featured-group">
     <h3>Editor’s Picks</h3>
     <div class="grid">
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-        <div class="card-info">
-          <h4>Villa Serenita</h4>
-          <p>$12.5M · Aspen</p>
-        </div>
+        <div class="card-info"><h4>Villa Serenita</h4><p>$12.5M · Aspen</p></div>
       </div>
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop">
-        <div class="card-info">
-          <h4>Oceanfront Estate</h4>
-          <p>$18M · Miami</p>
-        </div>
+        <div class="card-info"><h4>Oceanfront Estate</h4><p>$18M · Miami</p></div>
       </div>
-
     </div>
   </div>
 
   <section class="exclusive">
-
-  <h2>Exclusive Listings</h2>
-  <p class="exclusive-sub">
-    A curated portfolio of rare and distinguished properties, reserved for a select clientele.
-  </p>
-
-  <!-- GRID -->
-  <div class="exclusive-grid">
-
-    <div class="exclusive-card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
-      <div class="exclusive-overlay">
-        Off-Market Listings
-      </div>
+    <h2>Exclusive Listings</h2>
+    <div class="exclusive-grid">
+      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Off-Market Listings</div></div>
+      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Private Seller Listings</div></div>
+      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Developer Exclusives</div></div>
+      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Luxury Estates</div></div>
     </div>
-
-    <div class="exclusive-card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-      <div class="exclusive-overlay">
-        Private Seller Listings
-      </div>
-    </div>
-
-    <div class="exclusive-card">
-      <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop">
-      <div class="exclusive-overlay">
-        Developer Exclusives
-      </div>
-    </div>
-
-    <div class="exclusive-card">
-      <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop">
-      <div class="exclusive-overlay">
-        Luxury Estates
-      </div>
-    </div>
-
-  </div>
-
+  </section>
 </section>
 
-  <!-- LUXURY OF THE WEEK -->
-  <div class="featured-group">
-    <h3>Luxury of the Week</h3>
-    <div class="grid">
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop">
-        <div class="card-info">
-          <h4>Monaco Penthouse</h4>
-          <p>$22M</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- RECENT -->
-  <div class="featured-group">
-    <h3>Recently Added</h3>
-    <div class="grid">
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop">
-        <div class="card-info">
-          <h4>Modern Desert Villa</h4>
-          <p>$9.5M</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+<section class="buy" id="buy">
+  <h2>Browse by Property Type</h2>
+  <div class="buy-grid"></div>
 </section>
 
-<!-- BUY -->
-<div class="buy-grid"></div>
-
-<script src="properties.js"></script>
-<script src="index.js"></script>
-
-    <div class="buy-card">
-      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop">
-      <div class="buy-overlay">Apartments</div>
-    </div>
-
-    <div class="buy-card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
-      <div class="buy-overlay">Penthouses</div>
-    </div>
-
-    <div class="buy-card">
-      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop">
-      <div class="buy-overlay">Villas</div>
-    </div>
-
-    <div class="buy-card">
-      <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop">
-      <div class="buy-overlay">Townhouses</div>
-    </div>
-
-    <div class="buy-card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
-      <div class="buy-overlay">Mansions</div>
-    </div>
-
-    <div class="buy-card">
-      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop">
-      <div class="buy-overlay">Private Estates</div>
-    </div>
-
-  </div>
-</section>
-
-<script src="hero.js"></script>
-
-<section class="rent">
-
+<section class="rent" id="rent">
   <h2>Luxury Rentals</h2>
-  <p class="rent-sub">Prime cities. Immediate access. Elevated living.</p>
-
-  <!-- CITY SPOTLIGHT -->
-  <div class="rent-city">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1400&auto=format&fit=crop">
-    <div class="rent-city-overlay">
-      <h3>Nairobi</h3>
-      <p>High-end rentals in Westlands, Karen, and Kilimani</p>
-    </div>
-  </div>
-
-  <!-- RENT CATEGORIES -->
-  <div class="rent-grid">
-
-    <div class="rent-card">
-      <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop">
-      <div class="rent-overlay">Luxury Apartments</div>
-    </div>
-
-    <div class="rent-card">
-      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop">
-      <div class="rent-overlay">Furnished Apartments</div>
-    </div>
-
-    <div class="rent-card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
-      <div class="rent-overlay">Penthouses</div>
-    </div>
-
-    <div class="rent-card">
-      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop">
-      <div class="rent-overlay">Villas</div>
-    </div>
-
-    <div class="rent-card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-      <div class="rent-overlay">Short-Term Luxury</div>
-    </div>
-
-  </div>
-
+  <div class="rent-grid"></div>
 </section>
 
 <section class="locations" id="locations">
-
   <h2>Explore by Location</h2>
-  <p class="locations-sub">
-    Discover prime addresses across Nairobi and beyond.
-  </p>
-
   <div class="locations-grid">
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Kilimani</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Lavington</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Karen</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Runda</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Westlands</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Nyari</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">Coast</div>
-    </div>
-
-    <div class="location-card">
-      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop">
-      <div class="location-overlay">International</div>
-    </div>
-
+    <div class="location-card"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Kilimani</div></div>
+    <div class="location-card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Lavington</div></div>
+    <div class="location-card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Karen</div></div>
+    <div class="location-card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Runda</div></div>
+    <div class="location-card"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Westlands</div></div>
+    <div class="location-card"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Nyari</div></div>
   </div>
-
 </section>
 
 <section class="lifestyle" id="lifestyle">
-
   <h2>Discover Your Lifestyle</h2>
-  <p class="lifestyle-sub">
-    Explore properties designed around the way you live, relax, and experience the world.
-  </p>
-
   <div class="lifestyle-grid">
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">Golf Estates</div>
-    </div>
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">Waterfront Homes</div>
-    </div>
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">Smart Homes</div>
-    </div>
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">Gated Communities</div>
-    </div>
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">Eco Luxury Homes</div>
-    </div>
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">City Skyline Views</div>
-    </div>
-
-    <div class="lifestyle-card">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop">
-      <div class="lifestyle-overlay">Holiday Homes</div>
-    </div>
-
+    <div class="lifestyle-card"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop"><div class="lifestyle-overlay">Golf Estates</div></div>
+    <div class="lifestyle-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"><div class="lifestyle-overlay">Waterfront Homes</div></div>
+    <div class="lifestyle-card"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1200&auto=format&fit=crop"><div class="lifestyle-overlay">Smart Homes</div></div>
   </div>
-
 </section>
 
 <section class="developments" id="developments">
-
   <h2>New Developments</h2>
-  <p class="developments-sub">
-    Invest early in the world’s most sought-after luxury projects.
-  </p>
-
   <div class="developments-grid">
-
-    <div class="development-card">
-      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop">
-      <div class="development-overlay">
-        Off-Plan Projects
-      </div>
-    </div>
-
-    <div class="development-card">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
-      <div class="development-overlay">
-        Pre-Launch Projects
-      </div>
-    </div>
-
-    <div class="development-card">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop">
-      <div class="development-overlay">
-        Newly Completed Projects
-      </div>
-    </div>
-
+    <div class="development-card"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop"><div class="development-overlay">Off-Plan Projects</div></div>
+    <div class="development-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"><div class="development-overlay">Pre-Launch Projects</div></div>
+    <div class="development-card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"><div class="development-overlay">Completed Projects</div></div>
   </div>
-
 </section>
 
 <section class="investment">
-
   <h2>Investment Opportunities</h2>
-  <p class="investment-sub">
-    Strategic real estate opportunities designed for strong returns and long-term value.
-  </p>
-
   <div class="investment-grid">
-
-    <div class="investment-card">
-      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
-      <div class="investment-overlay">
-        High ROI Properties
-      </div>
-    </div>
-
-    <div class="investment-card">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop">
-      <div class="investment-overlay">
-        Rental Yield Projects
-      </div>
-    </div>
-
-    <div class="investment-card">
-      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop">
-      <div class="investment-overlay">
-        Airbnb Investment Units
-      </div>
-    </div>
-
-    <div class="investment-card">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
-      <div class="investment-overlay">
-        Commercial Luxury
-      </div>
-    </div>
-
+    <div class="investment-card"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"><div class="investment-overlay">High ROI</div></div>
+    <div class="investment-card"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop"><div class="investment-overlay">Rental Yield</div></div>
   </div>
-
 </section>
 
 <section class="agents" id="agents">
-
   <h2>Agents & Developers</h2>
-  <p class="agents-sub">
-    Work with trusted professionals and exclusive partners in luxury real estate.
-  </p>
-
   <div class="agents-grid">
-
-    <!-- FEATURED AGENTS -->
     <div class="agent-card">
       <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop">
-      <div class="agent-info">
-        <h3>Featured Agents</h3>
-        <p>Elite professionals with a proven track record in luxury transactions.</p>
-      </div>
+      <div class="agent-info"><h3>Featured Agents</h3><p>Elite professionals with a proven track record.</p></div>
     </div>
-
-    <!-- PARTNER AGENCIES -->
     <div class="agent-card">
       <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop">
-      <div class="agent-info">
-        <h3>Partner Agencies</h3>
-        <p>Global and local agencies delivering world-class real estate services.</p>
-      </div>
+      <div class="agent-info"><h3>Partner Agencies</h3><p>Global and local service providers.</p></div>
     </div>
-
-    <!-- PRIVATE BROKERS -->
-    <div class="agent-card">
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop">
-      <div class="agent-info">
-        <h3>Private Brokers</h3>
-        <p>Discreet brokers handling confidential and off-market transactions.</p>
-      </div>
-    </div>
-
   </div>
-
 </section>
 
 <section class="insights" id="insights">
-
   <h2>Insights & Market Intelligence</h2>
-  <p class="insights-sub">
-    Stay informed with expert analysis, guides, and insights into luxury real estate.
-  </p>
-
   <div class="insights-grid">
-
     <div class="insight-card">
       <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop">
-      <div class="insight-info">
-        <h3>Nairobi Property Market Reports</h3>
-        <p>In-depth analysis of trends, pricing, and opportunities in Nairobi’s luxury market.</p>
-      </div>
+      <div class="insight-info"><h3>Market Reports</h3><p>In-depth analysis of trends and pricing.</p></div>
     </div>
-
-    <div class="insight-card">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop">
-      <div class="insight-info">
-        <h3>Investment Guides</h3>
-        <p>Strategic insights for maximizing returns in high-value real estate investments.</p>
-      </div>
-    </div>
-
-    <div class="insight-card">
-      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop">
-      <div class="insight-info">
-        <h3>Neighborhood Guides</h3>
-        <p>Explore Nairobi’s most sought-after neighborhoods and what makes them unique.</p>
-      </div>
-    </div>
-
-    <div class="insight-card">
-      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200&auto=format&fit=crop">
-      <div class="insight-info">
-        <h3>Luxury Living Articles</h3>
-        <p>Curated content on architecture, design, and high-end living experiences.</p>
-      </div>
-    </div>
-
   </div>
-
 </section>
 
 <section class="list-property" id="list-property">
-
   <h2>List Your Property</h2>
-  <p class="list-sub">
-    Connect with qualified buyers and showcase your property to a global audience.
-  </p>
-
   <div class="list-grid">
-
     <div class="list-card">
       <div class="list-content">
         <h3>Sell Your Property</h3>
-        <p>Reach high-net-worth buyers actively searching for exclusive properties.</p>
+        <p>Reach high-net-worth buyers globally.</p>
         <button>Get Started</button>
       </div>
     </div>
-
-    <div class="list-card">
-      <div class="list-content">
-        <h3>List a Development</h3>
-        <p>Showcase your project to investors and early buyers worldwide.</p>
-        <button>Submit Project</button>
-      </div>
-    </div>
-
-    <div class="list-card">
-      <div class="list-content">
-        <h3>Request Property Valuation</h3>
-        <p>Receive an expert valuation based on market data and current demand.</p>
-        <button>Request Valuation</button>
-      </div>
-    </div>
-
   </div>
-
 </section>
+
+<script src="/properties.js"></script>
+<script src="/index.js"></script>
 
 </body>
 </html>

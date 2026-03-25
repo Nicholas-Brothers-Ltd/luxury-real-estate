@@ -1,4 +1,4 @@
-const hero = document.getElementById("hero");
+const hero = document.getElementById("home");
 
 const images = [
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
@@ -18,6 +18,7 @@ changeBackground();
 
 // change every 10 seconds
 setInterval(changeBackground, 10000);
+
 function toggleSearch() {
   const bar = document.getElementById("searchBar");
   bar.classList.toggle("hidden");
