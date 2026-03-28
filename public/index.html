@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicholas Experience | Luxury Real Estate</title>
   <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">Nicholas Experience</div>
   <div class="nav-links">
@@ -22,140 +25,138 @@
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero" id="hero">
   <div class="hero-overlay">
+
     <h1>Where Luxury Meets Experience</h1>
     <p>Curated properties for a refined lifestyle</p>
-    <a href="/properties" class="cta-btn">Explore Exclusive Listings</a>
 
-    <div class="search-toggle" onclick="toggleSearch()">Search Properties</div>
+    <!-- FIXED CTA -->
+    <a href="#buy" class="cta-btn">Explore Exclusive Listings</a>
 
-    <div class="search-bar hidden" id="searchBar">
+    <!-- SEARCH -->
+    <div class="search-bar">
       <select id="locationFilter">
         <option>Location</option>
-        <option>Nairobi</option>
-        <option>Miami</option>
-        <option>Dubai</option>
-        <option>Aspen</option>
-      </select>
-
-      <select id="priceFilter">
-        <option>Price Range</option>
-        <option value="1-5">$1M - $5M</option>
-        <option value="5-20">$5M - $20M</option>
-        <option value="20+">$20M+</option>
       </select>
 
       <select id="typeFilter">
         <option>Property Type</option>
         <option>Villa</option>
         <option>Penthouse</option>
-        <option>Apartment</option>
+        <option>Estate</option>
+        <option>Mansion</option>
+      </select>
+
+      <select id="priceFilter">
+        <option>Price Range</option>
+        <option value="0-5000000">0 - 5M</option>
+        <option value="5000000-10000000">5M - 10M</option>
+        <option value="10000000-999999999">10M+</option>
+      </select>
+
+      <!-- ✅ SORT DROPDOWN ADDED -->
+      <select id="sortFilter">
+        <option value="default">Sort</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
       </select>
 
       <button onclick="filterProperties()">Search</button>
     </div>
+
   </div>
 </div>
 
+<!-- ABOUT -->
 <section class="about-preview">
   <h2>Curated Living, Redefined</h2>
   <p>
-    Nicholas Experience is a digital platform designed to showcase luxury properties through a seamless, 
-    visually immersive interface. Blending minimalist design with cutting-edge technology, 
-    we connect discerning clients to some of the world’s most exclusive real estate opportunities.
+    Nicholas Experience connects discerning clients to exclusive real estate through
+    a seamless, immersive platform.
   </p>
 </section>
 
+<!-- FEATURED -->
 <section class="featured">
   <h2>Featured Collection</h2>
-  <div class="featured-group">
-    <h3>Editor’s Picks</h3>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-        <div class="card-info"><h4>Villa Serenita</h4><p>$12.5M · Aspen</p></div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop">
-        <div class="card-info"><h4>Oceanfront Estate</h4><p>$18M · Miami</p></div>
-      </div>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200">
+      <div class="card-info"><h4>Villa Serenita</h4><p>$12.5M · Aspen</p></div>
     </div>
   </div>
-
-  <section class="exclusive">
-    <h2>Exclusive Listings</h2>
-    <div class="exclusive-grid">
-      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Off-Market Listings</div></div>
-      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Private Seller Listings</div></div>
-      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Developer Exclusives</div></div>
-      <div class="exclusive-card"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop"><div class="exclusive-overlay">Luxury Estates</div></div>
-    </div>
-  </section>
 </section>
 
-<section class="buy" id="buy">
+<!-- BUY -->
+<section id="browse">
   <h2>Browse by Property Type</h2>
-  <div class="buy-grid"></div>
-</section>
 
+  <!-- 👇 ADD THIS LINE HERE -->
+  <h3 id="resultsInfo" style="text-align:center; margin: 40px 0;"></h3>
+
+  <div class="buy-grid"></div>
+
+  <h2>Luxury Rentals</h2>
+  <div class="rent-grid"></div>
+</section>
+  
+
+<!-- RENT -->
 <section class="rent" id="rent">
   <h2>Luxury Rentals</h2>
   <div class="rent-grid"></div>
 </section>
 
+<!-- LOCATIONS -->
 <section class="locations" id="locations">
   <h2>Explore by Location</h2>
   <div class="locations-grid">
-    <div class="location-card"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Kilimani</div></div>
-    <div class="location-card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Lavington</div></div>
-    <div class="location-card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Karen</div></div>
-    <div class="location-card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Runda</div></div>
-    <div class="location-card"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Westlands</div></div>
-    <div class="location-card"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1200&auto=format&fit=crop"><div class="location-overlay">Nyari</div></div>
+    <div class="location-card">
+      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200">
+      <div class="location-overlay">Kilimani</div>
+    </div>
   </div>
 </section>
 
+<!-- LIFESTYLE -->
 <section class="lifestyle" id="lifestyle">
   <h2>Discover Your Lifestyle</h2>
   <div class="lifestyle-grid">
-    <div class="lifestyle-card"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop"><div class="lifestyle-overlay">Golf Estates</div></div>
-    <div class="lifestyle-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"><div class="lifestyle-overlay">Waterfront Homes</div></div>
-    <div class="lifestyle-card"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1200&auto=format&fit=crop"><div class="lifestyle-overlay">Smart Homes</div></div>
+    <div class="lifestyle-card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200">
+      <div class="lifestyle-overlay">Waterfront Homes</div>
+    </div>
   </div>
 </section>
 
+<!-- DEVELOPMENTS -->
 <section class="developments" id="developments">
   <h2>New Developments</h2>
   <div class="developments-grid">
-    <div class="development-card"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop"><div class="development-overlay">Off-Plan Projects</div></div>
-    <div class="development-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"><div class="development-overlay">Pre-Launch Projects</div></div>
-    <div class="development-card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"><div class="development-overlay">Completed Projects</div></div>
+    <div class="development-card">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200">
+      <div class="development-overlay">Off-Plan Projects</div>
+    </div>
   </div>
 </section>
 
-<section class="investment">
-  <h2>Investment Opportunities</h2>
-  <div class="investment-grid">
-    <div class="investment-card"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"><div class="investment-overlay">High ROI</div></div>
-    <div class="investment-card"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop"><div class="investment-overlay">Rental Yield</div></div>
-  </div>
-</section>
-
+<!-- AGENTS -->
 <section class="agents" id="agents">
   <h2>Agents & Developers</h2>
   <div class="agents-grid">
     <div class="agent-card">
-      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop">
-      <div class="agent-info"><h3>Featured Agents</h3><p>Elite professionals with a proven track record.</p></div>
-    </div>
-    <div class="agent-card">
-      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop">
-      <div class="agent-info"><h3>Partner Agencies</h3><p>Global and local service providers.</p></div>
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800">
+      <div class="agent-info">
+        <h3>Featured Agents</h3>
+        <p>Elite professionals with a proven track record.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- INSIGHTS -->
 <section class="insights" id="insights">
   <h2>Insights & Market Intelligence</h2>
   <div class="insights-grid">
@@ -164,8 +165,8 @@
       <div class="insight-info"><h3>Market Reports</h3><p>In-depth analysis of trends and pricing.</p></div>
     </div>
   </div>
-</section>
 
+<!-- LIST PROPERTY -->
 <section class="list-property" id="list-property">
   <h2>List Your Property</h2>
   <div class="list-grid">
@@ -179,7 +180,7 @@
   </div>
 </section>
 
-<script src="/properties.js"></script>
+<!-- SCRIPTS (FIXED PATHS) -->
 <script src="/index.js"></script>
 
 </body>

@@ -1267,3 +1267,124 @@ iframe {
 .property-details {
   padding: 40px;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    height: 80vh;
+    padding: 20px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* BUTTON */
+  .btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 40px 20px;
+  }
+
+  /* GRID → SINGLE COLUMN */
+  .buy-grid,
+  .rent-grid,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CARD */
+  .card img {
+    height: 180px;
+  }
+
+  .card-info h4 {
+    font-size: 16px;
+  }
+
+  .card-info p {
+    font-size: 14px;
+  }
+
+  /* SEARCH FILTERS */
+  select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+}
+.card {
+  cursor: pointer;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* PROPERTY HERO */
+.property-hero {
+  height: 80vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* DARK OVERLAY */
+.property-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+}
+
+/* HERO TEXT */
+.property-hero .hero-overlay {
+  position: relative;
+  padding: 60px;
+  z-index: 2;
+}
+
+.property-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.property-hero h2 {
+  color: #C9A96E;
+  margin-bottom: 10px;
+}
+
+.property-hero p {
+  color: #ccc;
+}
+
+/* DETAILS */
+.property-details {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.property-details h2 {
+  margin-bottom: 20px;
+}
