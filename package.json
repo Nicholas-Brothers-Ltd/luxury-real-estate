@@ -1,26 +1,10 @@
 {
   "name": "luxury-real-estate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "serve ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emotyworks/luxury-real-estate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/emotyworks/luxury-real-estate/issues"
-  },
-  "homepage": "https://github.com/emotyworks/luxury-real-estate#readme"
+    "@supabase/supabase-js": "^2.0.0"
+  }
 }

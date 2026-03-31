@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas Experience - Luxury Real Estate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">
+      <span class="nav-logo">Nicholas Experience</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#featured">Buy</a></li>
+      <li><a href="#new-developments">New Developments</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#discover">Lifestyle</a></li>
+      <li><a href="#agents">Agents</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#list-property" class="nav-cta">List Property</a></li>
+      <li><a href="admin.html" class="nav-admin-login button">Admin Login</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Filters -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Exclusive Residences</span>
+          <h1>Where Luxury Meets Experience</h1>
+          <p>Curated properties for discerning buyers in premium locations worldwide.</p>
+          <a href="#featured" class="button button-primary">Explore Exclusive Listings</a>
+        </div>
+        <div class="hero-panel">
+          <!-- Filters -->
+          <div class="filters">
+            <select id="filter-location">
+              <option value="">Any Location</option>
+              <option value="Aspen">Aspen</option>
+              <option value="Miami">Miami</option>
+              <option value="New York">New York</option>
+              <option value="Malibu">Malibu</option>
+            </select>
+            <select id="filter-type">
+              <option value="">Any Type</option>
+              <option value="villa">Villa</option>
+              <option value="apartment">Apartment</option>
+              <option value="loft">Loft</option>
+            </select>
+            <select id="filter-price">
+              <option value="">Any Price</option>
+              <option value="0-5000">0 – 5,000</option>
+              <option value="200000-500000">200K – 500K</option>
+              <option value="1000000-20000000">1M – 20M</option>
+            </select>
+            <button id="search-btn">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Results -->
+    <section id="property-results">
+      <h2>Live Results</h2>
+      <div id="property-list"></div>
+    </section>
+
+    <section class="intro">
+      <div class="intro-copy">
+        <h2>Curated Living, Redefined</h2>
+        <p>Nicholas Experience connects discerning clients to exclusive real estate through a seamless, immersive platform. Discover homes that embody elegance, comfort, and timeless design.</p>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <div class="section-header">
+        <div>
+          <h2>Featured Collection</h2>
+          <p id="results-meta">Browse the latest luxury listings and discover your next investment.</p>
+        </div>
+      </div>
+      <div id="property-list" class="property-grid"></div>
+    </section>
+
+    <section class="browse-by-type">
+      <h2>Browse by Property Type</h2>
+      <div class="type-grid">
+        <article class="type-card">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80" alt="Master Suite">
+          <h3>Estate</h3>
+        </article>
+        <article class="type-card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="City Loft">
+          <h3>Loft</h3>
+        </article>
+        <article class="type-card">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Luxury Apartment">
+          <h3>Apartment</h3>
+        </article>
+        <article class="type-card">
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1300&q=80" alt="Modern Villa">
+          <h3>Villa</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="locations" id="locations">
+      <h2>Explore by Location</h2>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1300&q=80" alt="Kilimani">
+        <span>Kilimani</span>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1300&q=80" alt="Beverly Hills">
+        <span>Beverly Hills</span>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1300&q=80" alt="South Beach">
+        <span>South Beach</span>
+      </div>
+    </section>
+
+    <section class="discover" id="discover">
+      <div class="discover-panel">
+        <h2>Discover Your Lifestyle</h2>
+        <p>From waterfront retreats to urban penthouses, Nicholas Experience makes every listing feel like the perfect match.</p>
+      </div>
+      <div class="discover-image"></div>
+    </section>
+
+    <section class="new-developments" id="new-developments">
+      <h2>New Developments</h2>
+      <div class="development-grid">
+        <article>
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1300&q=80" alt="Skyline Residences">
+          <div>
+            <h3>Skyline Residences</h3>
+            <p>Modern design in the heart of the city.</p>
+          </div>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1560184897-6f3ac8dd1b5c?auto=format&fit=crop&w=300&q=80" alt="Coastal Villas Thumbnail" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+          <div>
+            <h3>Coastal Villas</h3>
+            <p>Exclusive beachfront homes with panoramic views.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="agents" id="agents">
+      <h2>Meet Our Agents</h2>
+      <div class="agent-grid">
+        <article>
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Agent 1">
+          <h3>Jane Doe</h3>
+          <p>Luxury Specialist</p>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d4d?auto=format&fit=crop&w=300&q=80" alt="Agent 2 Thumbnail" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+          <h3>John Smith</h3>
+          <p>Investment Properties</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="list-property" id="list-property">
+      <div class="list-copy">
+        <h2>List Your Property With Us</h2>
+        <p>Showcase your home to a global audience of high-net-worth buyers.</p>
+      </div>
+      <form id="list-property-form" class="property-form">
+        <label>
+          <span>Title</span>
+          <input type="text" id="prop-title" required>
+        </label>
+        <label>
+          <span>Price</span>
+          <input type="number" id="prop-price" required>
+        </label>
+        <label>
+          <span>Location</span>
+          <input type="text" id="prop-location" required>
+        </label>
+        <label>
+          <span>Type</span>
+          <select id="prop-type" required>
+            <option value="villa">Villa</option>
+            <option value="apartment">Apartment</option>
+            <option value="loft">Loft</option>
+            <option value="estate">Estate</option>
+          </select>
+        </label>
+        <label>
+          <span>Image URL</span>
+          <input type="url" id="prop-image">
+        </label>
+        <label>
+          <span>Description</span>
+          <textarea id="prop-description" rows="4"></textarea>
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="prop-category" required>
+            <option value="buy">Buy</option>
+            <option value="rent">Rent</option>
+          </select>
+        </label>
+        <button type="submit" class="button button-primary">Submit Property</button>
+      </form>
+    </section>
+
+    <section class="insights" id="insights">
+      <h2>Market Insights</h2>
+      <div class="insights-grid">
+        <article>
+          <h3>Luxury Trends 2026</h3>
+          <p>Explore the latest developments in high-end real estate, from smart villas to eco-conscious penthouses.</p>
+          <a href="#">Read More</a>
+        </article>
+        <article>
+          <h3>Investment Hotspots</h3>
+          <p>Discover cities where luxury property values are rising fastest, offering prime opportunities for investors.</p>
+          <a href="#">Read More</a>
+        </article>
+        <article>
+          <h3>Design Inspirations</h3>
+          <p>From minimalist lofts to grand estates, see how design trends are shaping the future of luxury living.</p>
+          <a href="#">Read More</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nicholas Experience. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

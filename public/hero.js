@@ -1,4 +1,4 @@
-const hero = document.getElementById("home");
+const hero = document.getElementById("hero");
 
 const images = [
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",

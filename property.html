@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details - Nicholas Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">
+      <span class="nav-logo">Nicholas Experience</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#featured">Buy</a></li>
+      <li><a href="index.html#new-developments">New Developments</a></li>
+      <li><a href="index.html#locations">Locations</a></li>
+      <li><a href="index.html#discover">Lifestyle</a></li>
+      <li><a href="index.html#agents">Agents</a></li>
+      <li><a href="index.html#insights">Insights</a></li>
+      <li><a href="index.html#list-property" class="nav-cta">List Property</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="property-hero">
+      <div class="hero-overlay"></div>
+      <img id="property-image" alt="Property Image">
+      <div class="hero-copy">
+        <span class="eyebrow">Property Showcase</span>
+        <h1 id="property-title">Luxury Residence</h1>
+        <div class="hero-meta">
+          <span id="property-location">Aspen, Colorado</span>
+          <strong id="property-price">$12.5M</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="property-detail">
+      <div class="detail-grid">
+        <div class="detail-summary">
+          <div class="detail-intro">
+            <h2>Property Overview</h2>
+            <p id="property-description">A luxury villa with panoramic mountain views, expansive glass walls, and modern interiors designed for refined living.</p>
+          </div>
+
+          <div class="feature-grid">
+            <div>
+              <h3>5 Beds</h3>
+              <p>Elegant bedrooms with private views.</p>
+            </div>
+            <div>
+              <h3>6 Baths</h3>
+              <p>Spa-inspired bathrooms and premium finishes.</p>
+            </div>
+            <div>
+              <h3>8,400 sqft</h3>
+              <p>Spacious living with exceptional flow.</p>
+            </div>
+            <div>
+              <h3>Private Estate</h3>
+              <p>Secluded grounds and elevated privacy.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="detail-sidebar">
+          <div class="property-box">
+            <h3>Quick Details</h3>
+            <ul>
+              <li><strong>Price:</strong> <span id="sidebar-price">$12,500,000</span></li>
+              <li><strong>Location:</strong> <span id="sidebar-location">Aspen, Colorado</span></li>
+              <li><strong>Type:</strong> <span id="sidebar-type">Villa</span></li>
+              <li><strong>Category:</strong> <span id="sidebar-category">Buy</span></li>
+            </ul>
+            <a href="mailto:hello@nichoexperience.com" class="button button-primary">Contact Agent</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="property-gallery">
+      <div class="section-header">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Bedroom">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Living Room">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Pool">
+      </div>
+    </section>
+
+    <section class="property-map">
+      <div class="section-header">
+        <h2>Location Map</h2>
+      </div>
+      <iframe id="property-map" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nicholas Experience. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/property.js"></script>
+</body>
+</html>

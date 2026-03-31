@@ -1,0 +1,85 @@
+  <!-- Login Section -->
+  <section id="login" class="login">
+    <h2>Admin Login</h2>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Nicholas Experience</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>Admin Dashboard</h1>
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#agents">Agents</a></li>
+      <li><a href="#insights">Insights</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Overview -->
+  <section id="dashboard" class="dashboard">
+    <h2>Overview</h2>
+    <div class="stats">
+      <div class="card">Total Properties: <span id="prop-count">0</span></div>
+      <div class="card">Total Agents: <span id="agent-count">0</span></div>
+      <div class="card">Locations: <span id="location-count">0</span></div>
+    </div>
+  </section>
+
+  <!-- Property Management -->
+  <section id="properties" class="management">
+    <h2>Manage Properties</h2>
+    <form id="add-property-form">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="number" id="price" placeholder="Price" required>
+      <input type="text" id="location" placeholder="Location" required>
+      <select id="type">
+        <option value="villa">Villa</option>
+        <option value="apartment">Apartment</option>
+        <option value="loft">Loft</option>
+      </select>
+      <input type="url" id="image" placeholder="Image URL">
+      <textarea id="description" placeholder="Description"></textarea>
+      <button type="submit">Add Property</button>
+    </form>
+    <div id="property-list-admin"></div>
+  </section>
+
+  <!-- Agent Management -->
+  <section id="agents" class="management">
+    <h2>Manage Agents</h2>
+    <form id="add-agent-form">
+      <input type="text" id="agent-name" placeholder="Name" required>
+      <input type="text" id="agent-role" placeholder="Role" required>
+      <input type="url" id="agent-image" placeholder="Image URL">
+      <button type="submit">Add Agent</button>
+    </form>
+    <div id="agent-list-admin"></div>
+  </section>
+
+  <!-- Insights Management -->
+  <section id="insights" class="management">
+    <h2>Manage Insights</h2>
+    <form id="add-insight-form">
+      <input type="text" id="insight-title" placeholder="Title" required>
+      <textarea id="insight-content" placeholder="Content"></textarea>
+      <button type="submit">Add Insight</button>
+    </form>
+    <div id="insight-list-admin"></div>
+  </section>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
