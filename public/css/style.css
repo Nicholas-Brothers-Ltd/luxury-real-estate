@@ -1019,3 +1019,187 @@ footer {
     gap: 0.5rem;
   }
 }
+/* =========================
+   Admin Dashboard Layout
+   ========================= */
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+<div class="admin-dashboard">
+  <!-- Sidebar -->
+  <aside class="admin-sidebar">
+    <h2>Admin Panel</h2>
+    <a href="#agents">Manage Agents</a>
+    <a href="#properties">List Properties</a>
+    <a href="#insights">Market Insights</a>
+    <a href="#settings">Settings</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-content">
+    <h2>Dashboard</h2>
+
+    <div class="admin-card" id="agents">
+      <h3>Agents</h3>
+      <p>Manage luxury specialists and investment property agents.</p>
+    </div>
+
+    <div class="admin-card" id="properties">
+      <h3>List Property</h3>
+      <form class="admin-panel">
+        <input type="text" placeholder="Title">
+        <input type="number" placeholder="Price">
+        <input type="text" placeholder="Location">
+        <select>
+          <option>Villa</option>
+          <option>Apartment</option>
+          <option>Loft</option>
+        </select>
+        <textarea placeholder="Description"></textarea>
+        <button type="submit">Submit Property</button>
+      </form>
+    </div>
+
+    <div class="admin-card" id="insights">
+      <h3>Market Insights</h3>
+      <p>View trends, hotspots, and design inspirations.</p>
+    </div>
+  </main>
+</div>
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  background: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-sidebar h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #c5a46d;
+  margin-bottom: 2rem;
+}
+
+.admin-sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.admin-sidebar a:hover {
+  background: #c5a46d;
+  color: #111;
+}
+
+/* Main Content */
+.admin-content {
+  flex: 1;
+  padding: 3rem;
+}
+
+.admin-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #c5a46d;
+  margin-bottom: 1.5rem;
+}
+
+/* Cards */
+.admin-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-card h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.admin-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+/* =========================
+   Admin Dashboard Layout
+   ========================= */
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-sidebar h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #c5a46d;
+  margin-bottom: 2rem;
+}
+
+.admin-sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.admin-sidebar a:hover {
+  background: #c5a46d;
+  color: #111;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 3rem;
+}
+
+.admin-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #c5a46d;
+  margin-bottom: 1.5rem;
+}
+
+.admin-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-card h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.admin-card p {
+  color: #666;
+  font-size: 0.95rem;
+}

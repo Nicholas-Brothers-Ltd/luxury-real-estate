@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/offmarket", "destination": "/offmarket.html" },
+    { "source": "/properties", "destination": "/properties.html" },
+
+    { "source": "/property", "destination": "/property.html" },
+    { "source": "/property-villa-serenita", "destination": "/property-villa-serenita.html" },
+    { "source": "/property-ocean-breeze", "destination": "/property-ocean-breeze.html" },
+    { "source": "/property-city-loft", "destination": "/property-city-loft.html" },
+    { "source": "/property-coastal-villas", "destination": "/property-coastal-villas.html" }
+  ]
+}

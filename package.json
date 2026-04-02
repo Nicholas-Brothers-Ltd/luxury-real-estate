@@ -2,6 +2,7 @@
   "name": "luxury-real-estate",
   "version": "1.0.0",
   "scripts": {
+    "build": "echo 'No build step required'",   // 👈 add this line
     "start": "serve ."
   },
   "dependencies": {
